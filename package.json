@@ -1,0 +1,29 @@
+{
+  "name": "auth-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "base64url": "^2.0.0",
+    "bcrypt": ">=0.8",
+    "bluebird": ">=3.4.x",
+    "body-parser": "1.15.x",
+    "chai": "^3.5.0",
+    "cors": "2.8.x",
+    "express": ">=4.14",
+    "jsrsasign": ">=6.x",
+    "mongoose": ">=4.6",
+    "mongoose-findorcreate": ">=0.1.2",
+    "nconf": ">=0.8",
+    "node-uuid": ">=1.4",
+    "redis": ">=2.6",
+    "request": ">=2.x",
+    "sinon": "^1.17.6",
+    "underscore": ">=1.8"
+  },
+  "author": "",
+  "license": "ISC"
+}

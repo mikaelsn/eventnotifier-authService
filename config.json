@@ -1,0 +1,10 @@
+{
+  "jwt": {
+    "algorithm": "HS256",
+    "secret_separator": "1234",
+    "secret": "12345"
+  },
+  "key_service": {
+    "expires_seconds": 3600
+  }
+}
