@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:latest
 
 # Create app directory
 RUN mkdir -p /usr/src/app
@@ -11,5 +11,8 @@ RUN npm install --production
 # Bundle app source
 COPY . /usr/src/app
 
+EXPOSE 5858
 EXPOSE 8083
-CMD npm install --production; node app.js
+
+RUN npm install --production
+CMD ["node", "--debug=5858","app.js"]

@@ -25,15 +25,10 @@ UserSchema.pre('save', function (next) {
 });
 
 UserSchema.methods.comparePassword = function (candidatePassword) {
-  console.log(candidatePassword + " : " + this.password);
-  var result = bcrypt.compare(candidatePassword, this.password, function (err, isMatch) {
-    if (!err) {
-      console.log("match:" + isMatch);
-      return isMatch;
-    } else {
-      console.log('bcrypt error: ' + err);
-    }
+  var res = bcrypt.compare(candidatePassword, this.password).then(function (result) {
+      console.log("match:" + result);
   });
+  return res;
 };
 
 UserSchema.plugin(findOrCreate);
